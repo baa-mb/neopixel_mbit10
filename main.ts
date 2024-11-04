@@ -1,0 +1,10 @@
+basic.showIcon(IconNames.SmallSquare)
+let strip = neopixel.create(DigitalPin.P0, 64, NeoPixelMode.RGB)
+strip.setBrightness(32)
+strip.showRainbow(1, 360)
+strip.show()
+basic.forever(function () {
+    strip.rotate(8)
+    strip.show()
+    basic.pause(200)
+})
